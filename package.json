@@ -1,7 +1,10 @@
 {
-  "name": "rspress-doc-template",
+  "name": "miss-gwen-blog",
   "version": "1.0.0",
   "private": true,
+  "description": "Miss Gwen · dev.log —— 粉色 × 终端风的个人技术博客,基于 RSPress 2 自定义主题。",
+  "author": "MissGwen",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "build": "rspress build",

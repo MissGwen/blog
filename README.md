@@ -108,3 +108,12 @@ theme/                    # 自定义主题(入口 theme/index.tsx)
 - 主题内一律从 `@rspress/core/theme-original` 导入,避免循环依赖
 - 站点级配置集中在 `rspress.config.ts`,不散落页面
 - 提交前:`pnpm run lint` + `pnpm exec tsc --noEmit`,格式化交给 `pnpm run format`
+
+## 致谢
+
+- 框架:[Rspress](https://rspress.rs/)(MIT)
+- 等宽字体:[JetBrains Mono](https://www.jetbrains.com/lp/mono/)(OFL)
+
+## License
+
+[MIT](./LICENSE) © 2026 MissGwen
