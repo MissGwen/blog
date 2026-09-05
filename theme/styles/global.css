@@ -1,0 +1,113 @@
+/* 全局细节:等宽字体落点、选区、滚动条、行内代码。 */
+
+/* 站点标识与首页 hero 使用等宽字体 */
+.rp-nav__title,
+.rp-home-hero__badge,
+.rp-home-hero__title-brand,
+.rp-home-hero__subtitle {
+  font-family: var(--mg-font-mono);
+  letter-spacing: 0.02em;
+}
+
+/* 导航 logo 文案是一行代码,保持单行不折行 */
+.rp-nav__title {
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+/* 文本选区使用品牌粉 */
+::selection {
+  background: rgba(214, 76, 168, 0.22);
+}
+
+/* WebKit 滚动条:细、淡、终端感 */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(214, 76, 168, 0.35);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(214, 76, 168, 0.55);
+  background-clip: content-box;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 行内代码:等宽 + 淡粉底色 */
+code:not(pre code) {
+  font-family: var(--mg-font-mono);
+}
+
+/* 共享胶囊按钮(首页 / 404 等使用) */
+.mg-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.mg-btn--brand {
+  background: var(--rp-home-hero-title-bg);
+  color: #fff;
+  box-shadow: var(--mg-shadow-hover);
+}
+
+.mg-btn--brand:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--mg-shadow-card);
+}
+
+.mg-btn--alt {
+  border: 1px solid var(--rp-c-divider);
+  background: var(--rp-c-bg);
+  color: var(--rp-c-text-1);
+}
+
+.mg-btn--alt:hover {
+  border-color: var(--rp-c-brand);
+  color: var(--rp-c-brand);
+  transform: translateY(-2px);
+}
+
+/* 标签胶囊(博客列表卡片 / 文章页元信息行共用) */
+.mg-post-tag {
+  padding: 1px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--rp-c-brand);
+  background: var(--rp-c-brand-tint);
+  color: var(--rp-c-brand);
+  font-size: 0.75rem;
+}
+
+/* 尊重系统"减少动态效果"设置:关闭装饰性动画与过渡 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* 导航 logo 文案是一行代码,小屏缩到足够小避免溢出 */
+@media (max-width: 768px) {
+  .rp-nav__title__link > span {
+    font-size: 0.62rem;
+  }
+}

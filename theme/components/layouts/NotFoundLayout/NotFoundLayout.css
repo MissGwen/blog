@@ -1,0 +1,28 @@
+.mg-404 {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 96px 24px;
+  text-align: center;
+}
+
+.mg-404__code {
+  margin: 0 0 24px;
+  font-family: var(--mg-font-mono);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  background: var(--rp-home-hero-title-bg);
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-clip: text;
+}
+
+.mg-404__terminal {
+  text-align: left;
+}
+
+.mg-404__btn {
+  margin-top: 28px;
+}

@@ -1,0 +1,87 @@
+.mg-blog-list {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+/* 文章卡片 */
+.mg-post-card {
+  padding: 16px 18px;
+  border: 1px solid var(--rp-c-divider-light);
+  border-radius: var(--mg-radius-card);
+  background-color: var(--rp-c-bg);
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+
+.mg-post-card:hover {
+  border-color: var(--rp-c-brand);
+  box-shadow: var(--mg-shadow-hover);
+  transform: translateY(-1px);
+}
+
+.mg-post-card__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 6px;
+  font-family: var(--mg-font-mono);
+  font-size: 0.8rem;
+}
+
+.mg-post-card__date {
+  color: var(--rp-c-text-2);
+}
+
+.mg-post-card__title {
+  display: block;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--rp-c-text-0);
+  text-decoration: none;
+}
+
+.mg-post-card__title:hover {
+  color: var(--rp-c-brand);
+}
+
+.mg-post-card__desc {
+  margin: 6px 0 0;
+  color: var(--rp-c-text-2);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* 空态 CTA */
+.mg-empty-cta {
+  display: block;
+  margin: 14px auto 0;
+  width: fit-content;
+  padding: 7px 18px;
+  border: 1px solid var(--rp-c-brand);
+  border-radius: 999px;
+  background: var(--rp-c-brand-tint);
+  color: var(--rp-c-brand);
+  font-family: var(--mg-font-mono);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.mg-empty-cta:hover {
+  border-color: var(--rp-c-brand-dark);
+}
+
+.mg-empty-cta__arrow {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.mg-empty-cta:hover .mg-empty-cta__arrow {
+  transform: translateX(3px);
+}

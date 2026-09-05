@@ -1,0 +1,13 @@
+.mg-post-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-family: var(--mg-font-mono);
+  font-size: 0.85rem;
+}
+
+.mg-post-meta__date {
+  color: var(--rp-c-text-2);
+}

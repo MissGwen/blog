@@ -1,0 +1,17 @@
+[
+  {
+    "type": "dir",
+    "name": "rust",
+    "label": "Rust"
+  },
+  {
+    "type": "dir",
+    "name": "frontend",
+    "label": "前端"
+  },
+  {
+    "type": "dir",
+    "name": "backend",
+    "label": "后端"
+  }
+]

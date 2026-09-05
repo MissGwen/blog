@@ -1,0 +1,36 @@
+/* 设计 token:终端窗口与自定义组件的统一视觉变量。
+   品牌色板见 palette.css;Rspress 内置变量由其自身提供。 */
+:root {
+  /* 等宽字体栈:技术感的骨架 */
+  --mg-font-mono:
+    'JetBrains Mono Variable', 'JetBrains Mono', Menlo, Monaco, Consolas,
+    'Courier New', monospace;
+
+  /* 终端窗口(深色面板,不随主题变化以保持终端质感) */
+  --mg-term-bg: #17151f;
+  --mg-term-bar-bg: rgba(255, 255, 255, 0.04);
+  --mg-term-bar-border: rgba(255, 255, 255, 0.08);
+  --mg-term-border: rgba(214, 76, 168, 0.35);
+  --mg-term-text: #e9dff2;
+  --mg-term-text-dim: #b7a8c9;
+  --mg-term-title: rgba(255, 255, 255, 0.55);
+  --mg-term-accent: #ff5db1;
+  --mg-term-accent-soft: #ff87c9;
+
+  /* 终端三色圆点 */
+  --mg-term-dot-red: #ff7eb6;
+  --mg-term-dot-yellow: #ffd166;
+  --mg-term-dot-green: #8ce99a;
+
+  /* 阴影 */
+  --mg-shadow-card:
+    0 12px 32px rgba(214, 76, 168, 0.18), 0 2px 8px rgba(0, 0, 0, 0.12);
+  --mg-shadow-hover: 0 4px 16px rgba(214, 76, 168, 0.14);
+
+  /* 圆角 */
+  --mg-radius-term: 14px;
+  --mg-radius-card: 10px;
+
+  /* 网格背景尺寸 */
+  --mg-grid-size: 24px;
+}

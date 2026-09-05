@@ -1,0 +1,123 @@
+.mg-term {
+  border: 1px solid var(--mg-term-border);
+  border-radius: var(--mg-radius-term);
+  background: var(--mg-term-bg);
+  box-shadow: var(--mg-shadow-card);
+  overflow: hidden;
+  font-family: var(--mg-font-mono);
+  text-align: left;
+}
+
+.mg-term__bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: var(--mg-term-bar-bg);
+  border-bottom: 1px solid var(--mg-term-bar-border);
+}
+
+.mg-term__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.mg-term__dot--red {
+  background: var(--mg-term-dot-red);
+}
+
+.mg-term__dot--yellow {
+  background: var(--mg-term-dot-yellow);
+}
+
+.mg-term__dot--green {
+  background: var(--mg-term-dot-green);
+}
+
+.mg-term__title {
+  margin-left: 6px;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--mg-term-title);
+}
+
+.mg-term__body {
+  padding: 18px 20px 20px;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--mg-term-text);
+}
+
+.mg-term__body :where(p, div) {
+  margin: 0;
+}
+
+.mg-term__line {
+  word-break: break-word;
+}
+
+/* 终端内嵌入的代码块:透明底 + 继承终端配色,避免浅色模式下出现白底 */
+.mg-term__body pre {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.mg-term__body pre,
+.mg-term__body pre code {
+  color: var(--mg-term-text);
+}
+
+.mg-term__body pre code {
+  background: transparent;
+}
+
+/* shiki 会给语法 token(span)单独上色,在深色终端里统一为浅色文字 */
+.mg-term__body pre code,
+.mg-term__body pre code span,
+.mg-term__body pre .shiki,
+.mg-term__body pre .shiki span {
+  color: var(--mg-term-text) !important;
+  background: transparent !important;
+  font-style: normal;
+}
+
+.mg-term__prompt {
+  color: var(--mg-term-accent);
+  margin-right: 8px;
+  user-select: none;
+}
+
+.mg-term__line--output {
+  color: var(--mg-term-text-dim);
+}
+
+.mg-term__line--cursor {
+  line-height: 1.6;
+}
+
+.mg-term__blink {
+  display: inline-block;
+  width: 0.6em;
+  height: 1.15em;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  background: var(--mg-term-accent);
+  animation: mg-term-blink 1.1s steps(1) infinite;
+}
+
+@keyframes mg-term-blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
