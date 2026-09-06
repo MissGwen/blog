@@ -16,7 +16,7 @@ function homeMarkdown(): string {
     '',
     SITE.tagline,
     '',
-    `- [进入博客](/blog/)`,
+    `- [进入博客](/posts/)`,
     `- [GitHub](${SITE.github})`,
     '',
     '## 博客分类',
@@ -47,7 +47,7 @@ function HomeConsole() {
         <p className="mg-home__tagline">{SITE.tagline}</p>
 
         <div className="mg-home__actions">
-          <Link className="mg-btn mg-btn--brand" href="/blog/">
+          <Link className="mg-btn mg-btn--brand" href="/posts/">
             进入博客
           </Link>
           <a
@@ -75,7 +75,7 @@ function HomeConsole() {
                 <span className="mg-dir-card__emoji">{cat.emoji}</span>
                 <span className="mg-dir-card__name">{cat.label}</span>
               </div>
-              <code className="mg-dir-card__path">~/blog/{cat.slug}</code>
+              <code className="mg-dir-card__path">~/posts/{cat.slug}</code>
               <p className="mg-dir-card__blurb">{cat.blurb}</p>
               <span className="mg-dir-card__count">
                 {countFor(cat.slug)} 篇笔记 →

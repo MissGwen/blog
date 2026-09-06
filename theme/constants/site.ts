@@ -9,7 +9,7 @@ export const SITE = {
   github: 'https://github.com/MissGwen',
 } as const;
 
-export const BLOG_ROOT = '/blog/';
+export const BLOG_ROOT = '/posts/';
 
 export interface Category {
   slug: string;
@@ -25,21 +25,21 @@ export const CATEGORIES: Category[] = [
     slug: 'rust',
     label: 'Rust',
     emoji: '🦀',
-    path: '/blog/rust/',
+    path: '/posts/rust/',
     blurb: '所有权、异步、CLI 与工具链',
   },
   {
     slug: 'frontend',
     label: '前端',
     emoji: '🎨',
-    path: '/blog/frontend/',
+    path: '/posts/frontend/',
     blurb: '工程化、框架、性能与体验',
   },
   {
     slug: 'backend',
     label: '后端',
     emoji: '⚙️',
-    path: '/blog/backend/',
+    path: '/posts/backend/',
     blurb: '服务、架构、数据库与部署',
   },
 ];

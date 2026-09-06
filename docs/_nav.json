@@ -1,8 +1,8 @@
 [
   {
     "text": "博客",
-    "link": "/blog/",
-    "activeMatch": "/blog/"
+    "link": "/posts/",
+    "activeMatch": "/posts/"
   },
   {
     "text": "关于",
